@@ -1,0 +1,5 @@
+tool,events,hours_saved,avg_quality,rated_share,cost_eur,cost_per_hour_saved_eur
+M365 Copilot,941,225.0,3.87,0.76,194.45,0.864
+Rapid Response agent,265,170.2,3.77,0.69,56.3,0.331
+Policy Digest agent,269,341.2,3.78,0.7,57.52,0.169
+Power Automate flow,286,77.4,3.76,0.75,61.69,0.797

@@ -1,0 +1,44 @@
+[
+  {
+    "dataset": "bronze/ai_usage_events",
+    "layer": "bronze",
+    "owner": "Data curator, CA Digital",
+    "classification": "Internal, may contain personal data",
+    "description": "Raw usage export, unchanged"
+  },
+  {
+    "dataset": "bronze/policy_news",
+    "layer": "bronze",
+    "owner": "Data curator, Policy",
+    "classification": "Internal",
+    "description": "Raw policy news feed, unchanged"
+  },
+  {
+    "dataset": "silver/ai_usage_events",
+    "layer": "silver",
+    "owner": "Data curator, CA Digital",
+    "classification": "Internal, pseudonymous ids, comments masked",
+    "description": "Validated, deduplicated usage events"
+  },
+  {
+    "dataset": "silver/policy_news",
+    "layer": "silver",
+    "owner": "Data curator, Policy",
+    "classification": "Internal",
+    "description": "Validated, deduplicated news items"
+  },
+  {
+    "dataset": "gold/kpi_*",
+    "layer": "gold",
+    "owner": "CA AI team",
+    "classification": "Internal, aggregated",
+    "description": "Adoption, productivity, quality and cost KPIs"
+  },
+  {
+    "dataset": "gold/fact_usage + dim_*",
+    "layer": "gold",
+    "owner": "CA AI team",
+    "classification": "Internal, pseudonymous",
+    "description": "Star schema loaded by Power BI"
+  }
+]

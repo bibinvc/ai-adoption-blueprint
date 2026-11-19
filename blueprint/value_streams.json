@@ -1,0 +1,55 @@
+{
+  "assumptions": {
+    "note": "Illustrative durations for a fictional Corporate Affairs team, to be replaced by interview and timing data during pilots.",
+    "loaded_cost_eur_per_hour": 65
+  },
+  "streams": [
+    {
+      "name": "Rapid Response",
+      "trigger": "A sensitive news item or stakeholder question needs a public position within hours",
+      "occurrences_per_year": 72,
+      "steps": [
+        {"step": "Detect the issue", "owner": "Communications", "touch_h": 0.5, "wait_h": 2.0,
+         "pain": "Alerts arrive by email and are missed outside office hours",
+         "future": {"touch_h": 0.2, "wait_h": 0.3, "change": "Monitoring agent flags and summarises high-severity items"}},
+        {"step": "Assess impact and find past positions", "owner": "Policy", "touch_h": 3.0, "wait_h": 4.0,
+         "pain": "Past positions spread across SharePoint sites, emails and slide decks",
+         "future": {"touch_h": 1.0, "wait_h": 1.0, "change": "Rapid Response agent (Copilot Studio) searches approved positions with sources"}},
+        {"step": "Draft holding statement", "owner": "Communications", "touch_h": 2.0, "wait_h": 1.0,
+         "pain": "Each draft starts from a blank page",
+         "future": {"touch_h": 0.75, "wait_h": 0.5, "change": "Agent drafts from approved language, writer edits"}},
+        {"step": "Legal and leadership approval", "owner": "Legal liaison", "touch_h": 1.0, "wait_h": 8.0,
+         "pain": "Sequential approvals by email, no status visibility",
+         "future": {"touch_h": 1.0, "wait_h": 3.0, "change": "Power Automate parallel approvals with reminders and status"}},
+        {"step": "Publish and brief markets", "owner": "Communications", "touch_h": 1.0, "wait_h": 2.0,
+         "pain": "Briefing packs rebuilt and translated by hand per market",
+         "future": {"touch_h": 0.5, "wait_h": 0.5, "change": "Briefing pack generated and translated, checked by market leads"}},
+        {"step": "Monitor reactions", "owner": "Research & Insights", "touch_h": 2.0, "wait_h": 0.0,
+         "pain": "Manual media counts in spreadsheets",
+         "future": {"touch_h": 1.0, "wait_h": 0.0, "change": "Reaction dashboard fed from the data lake"}}
+      ]
+    },
+    {
+      "name": "Policy Intelligence Reporting",
+      "trigger": "Weekly report on regulatory developments for each region",
+      "occurrences_per_year": 208,
+      "steps": [
+        {"step": "Collect news and official sources", "owner": "Policy", "touch_h": 6.0, "wait_h": 0.0,
+         "pain": "Copy and paste from many websites and newsletters",
+         "future": {"touch_h": 0.5, "wait_h": 0.0, "change": "Feeds land in the data lake, deduplicated and checked"}},
+        {"step": "Tag topic, market and severity", "owner": "Policy", "touch_h": 4.0, "wait_h": 0.0,
+         "pain": "Inconsistent tags between analysts",
+         "future": {"touch_h": 1.0, "wait_h": 0.0, "change": "Policy Digest agent proposes tags, analyst confirms"}},
+        {"step": "Summarise for the region", "owner": "Policy", "touch_h": 8.0, "wait_h": 0.0,
+         "pain": "Long summaries written from scratch every week",
+         "future": {"touch_h": 2.5, "wait_h": 0.0, "change": "Draft digest with sources, analyst edits"}},
+        {"step": "Review and sign off", "owner": "Head of Policy", "touch_h": 2.0, "wait_h": 24.0,
+         "pain": "Report waits in an inbox for review",
+         "future": {"touch_h": 1.5, "wait_h": 8.0, "change": "Review task with deadline and reminder"}},
+        {"step": "Distribute", "owner": "Communications", "touch_h": 1.0, "wait_h": 2.0,
+         "pain": "Distribution lists maintained by hand",
+         "future": {"touch_h": 0.2, "wait_h": 0.5, "change": "Power Automate posts to Teams channels and email lists"}}
+      ]
+    }
+  ]
+}

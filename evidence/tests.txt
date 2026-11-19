@@ -1,0 +1,23 @@
+test_math_and_licence_models (test_blueprint.BusinessCaseTests.test_math_and_licence_models) ... ok
+test_scenarios_are_ordered (test_blueprint.BusinessCaseTests.test_scenarios_are_ordered) ... ok
+test_every_skill_has_name_and_description (test_blueprint.CoworkSkillTests.test_every_skill_has_name_and_description) ... ok
+test_high_severity_goes_to_rapid_response (test_blueprint.DigestAndPortfolioTests.test_high_severity_goes_to_rapid_response) ... ok
+test_portfolio_flags_pilots_without_reviews (test_blueprint.DigestAndPortfolioTests.test_portfolio_flags_pilots_without_reviews) ... ok
+test_shipped_portfolio_has_no_blocked_pilot (test_blueprint.DigestAndPortfolioTests.test_shipped_portfolio_has_no_blocked_pilot) ... ok
+test_bronze_is_an_unchanged_copy_with_lineage (test_blueprint.LakeTests.test_bronze_is_an_unchanged_copy_with_lineage) ... ok
+test_catalog_names_an_owner_for_every_dataset (test_blueprint.LakeTests.test_catalog_names_an_owner_for_every_dataset) ... ok
+test_every_injected_usage_defect_is_caught (test_blueprint.LakeTests.test_every_injected_usage_defect_is_caught) ... ok
+test_gold_kpis_are_consistent (test_blueprint.LakeTests.test_gold_kpis_are_consistent) ... ok
+test_news_duplicates_and_missing_market_quarantined (test_blueprint.LakeTests.test_news_duplicates_and_missing_market_quarantined) ... ok
+test_personal_data_is_masked_in_silver (test_blueprint.LakeTests.test_personal_data_is_masked_in_silver) ... ok
+test_quarantine_keeps_rejected_rows_with_reason (test_blueprint.LakeTests.test_quarantine_keeps_rejected_rows_with_reason) ... ok
+test_regions_start_at_their_rollout_wave (test_blueprint.LakeTests.test_regions_start_at_their_rollout_wave) ... ok
+test_star_schema_keys_join (test_blueprint.LakeTests.test_star_schema_keys_join) ... ok
+test_future_is_better_for_both_streams (test_blueprint.ValueStreamTests.test_future_is_better_for_both_streams) ... ok
+test_mermaid_has_one_node_per_step (test_blueprint.ValueStreamTests.test_mermaid_has_one_node_per_step) ... ok
+test_metrics (test_blueprint.ValueStreamTests.test_metrics) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.056s
+
+OK

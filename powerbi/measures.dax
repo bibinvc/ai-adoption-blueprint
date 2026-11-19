@@ -1,0 +1,31 @@
+// Power BI measures for the AI adoption report.
+// Model: fact_usage (many) -> dim_user, dim_tool, dim_date (one), loaded from out/lake/gold/*.csv.
+// Written for the star schema produced by aab/lake.py; not run in Power BI by the author.
+
+Licensed Users = COUNTROWS ( FILTER ( dim_user, dim_user[licensed] = "yes" ) )
+
+Active Users = DISTINCTCOUNT ( fact_usage[user_id] )
+
+Active Users Last 4 Weeks =
+VAR LastWeek = MAX ( dim_date[week] )
+RETURN
+    CALCULATE ( [Active Users], FILTER ( ALL ( dim_date ), dim_date[week] > LastWeek - 4 ) )
+
+Adoption Rate = DIVIDE ( [Active Users Last 4 Weeks], [Licensed Users] )
+
+Hours Saved (Reported) = DIVIDE ( SUM ( fact_usage[minutes_saved] ), 60 )
+
+Hours Saved (Counted) =
+VAR RealisationRate = 0.40   // share of self-reported savings counted in the base case
+RETURN [Hours Saved (Reported)] * RealisationRate
+
+Average Quality =
+AVERAGEX ( FILTER ( fact_usage, fact_usage[quality_rating] <> BLANK () ), VALUE ( fact_usage[quality_rating] ) )
+
+Rated Share = DIVIDE ( COUNTROWS ( FILTER ( fact_usage, fact_usage[quality_rating] <> BLANK () ) ), COUNTROWS ( fact_usage ) )
+
+Usage Cost EUR = SUM ( fact_usage[cost_eur] )
+
+Cost per Hour Saved = DIVIDE ( [Usage Cost EUR], [Hours Saved (Reported)] )
+
+Uses per Active User = DIVIDE ( COUNTROWS ( fact_usage ), [Active Users] )

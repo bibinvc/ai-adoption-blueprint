@@ -1,0 +1,24 @@
+{
+  "ai_usage_events": {
+    "raw_rows": 1766,
+    "accepted": 1761,
+    "quarantined": 5,
+    "checks": {
+      "duplicate row": 1,
+      "missing or unknown user_id": 1,
+      "quality_rating not in 1-5": 1,
+      "event_date outside pilot window": 1,
+      "personal data masked in comment": 1,
+      "unknown tool": 1
+    }
+  },
+  "policy_news": {
+    "raw_rows": 162,
+    "accepted": 157,
+    "quarantined": 5,
+    "checks": {
+      "duplicate item": 4,
+      "missing market": 1
+    }
+  }
+}

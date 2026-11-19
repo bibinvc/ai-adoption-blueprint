@@ -1,0 +1,9 @@
+use_case,stream,owner,stage,tools,value_hypothesis,risk_level,responsible_ai_review,privacy_review,next_step
+Rapid Response agent,Rapid Response,Head of Communications,pilot,Copilot Studio + SharePoint,Shorter time to a first approved statement,medium,done,done,Measure time to first draft on 10 real cases
+Parallel approvals flow,Rapid Response,Legal liaison,pilot,Power Automate + Teams,Fewer hours waiting for approvals,low,done,not needed,Add reminder after 2 hours
+Policy Digest agent,Policy Intelligence Reporting,Head of Policy,pilot,Copilot Studio + data lake,Weekly digest drafted in minutes,medium,done,done,Compare agent tags with analyst tags
+Market briefing translation,Rapid Response,Market leads,idea,M365 Copilot,Briefing packs ready for markets the same day,medium,to do,to do,Check translation quality with 3 markets
+Reaction dashboard,Rapid Response,Research & Insights,idea,Power BI + data lake,Faster read of media reaction,low,to do,to do,Define media data source and owner
+Meeting recap with Copilot,All,CA AI team,scaled,M365 Copilot,Less time on minutes,low,done,done,Track adoption per region
+Cowork weekly digest skill,Policy Intelligence Reporting,Head of Policy,idea,Copilot Cowork + SharePoint,Digest drafted and filed without copying between apps,medium,to do,to do,Run the 6 pre-pilot tests in copilot-cowork/README.md
+Cowork Rapid Response brief skill,Rapid Response,Head of Communications,idea,Copilot Cowork + Teams,One-page brief with approved positions in minutes,medium,to do,to do,Run the 6 pre-pilot tests in copilot-cowork/README.md
